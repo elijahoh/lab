@@ -1,0 +1,15 @@
+#!/bin/bash
+
+text="hello world world"
+echo "Original text: ${text}"
+echo ""
+# Replace first match
+text1="${text/world/bash}"
+echo "Replace first 'world' as 'bash: ${text1}"
+echo ""
+# Replace all matches
+text2="${text//world/bash}"
+echo "Replace all 'world' with 'bash': ${text2}"
+echo ""
+# Delete (replace with nothing)
+echo "Remove spaces: ${text// /}"

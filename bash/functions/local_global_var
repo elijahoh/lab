@@ -1,0 +1,11 @@
+#!/bin/bash
+
+my_function () {
+	local name="Changed"
+	echo "Local Variable: ${name}"
+}
+
+name="Original"
+my_function 
+echo "Global Variable: ${name}"
+

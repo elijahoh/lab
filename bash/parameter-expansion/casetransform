@@ -1,0 +1,13 @@
+#!/bin/bash
+text1="hello world"
+echo "Text1: ${text1}"
+echo ""
+echo "Capitalize first character: ${text1^}"
+echo ""
+echo "Uppercase: ${text1^^}"
+echo ""
+echo ""
+text2="HELLO WORLD"
+echo "Text2: ${text2}"
+echo ""
+echo "Lowercase: ${text2,,}"

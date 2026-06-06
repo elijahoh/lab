@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Use default if variable is empty or unset
+name1=""
+echo "Hello, ${name1:-User}"
+echo "${name1}"
+# Hello, User
+#
+# Set the variable if unset or empty
+name2=""
+echo "${name2:=User}"
+echo "${name2}"
+# Now contains "User"

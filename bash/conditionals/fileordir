@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# OR - either can be true
+if [[ -z "$1" || "$1" == "--help" ]]; then
+	# Provide help to the user
+	echo "Usage: $0  <filename>"
+	exit 1
+fi
+
+# Or - both must be true
+if [[ -f "$1" && -r "$1" ]]; then
+	echo "File exists and is readable"
+fi
+
+if [[ -f "$1" ]]; then
+        echo "It is a file"
+elif [[ -d "$1" ]]; then
+        echo "It is a directory"
+else
+        echo "Not found: $1"
+fi 

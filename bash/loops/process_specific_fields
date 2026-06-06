@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# shellcheck disable=SC2154
+
+# Add dummy declarations so shellcheck is able to detect the variables
+# declare user ui gid home shell
+
+# /etc/passwd format: user:x:uid:gid:info:home:shell
+while IFS=: read -r user _ uid gid _ home shell;do
+	echo "${user} (UID ${uid}) (Group ${gid}) uses ${shell}"
+done < /etc/passwd

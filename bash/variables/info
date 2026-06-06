@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Description: info script displays information about the ~/dotfiles setup (no. of files) 
+
+directory="${HOME}/dotfiles"
+echo "Checking directory: ${directory}"
+echo ""
+number="$(ls "${directory}" | wc -l)"
+echo "There are ${number} file(s) in ${directory}"
+echo ""
+today=$(date +%Y-%m-%d)
+echo "=== Dotfiles Info==="
+echo "User: ${USER}"
+echo "Dotfiles location: ${directory}"
+echo "Files tracked: ${number}"
+echo "Date: ${today}"

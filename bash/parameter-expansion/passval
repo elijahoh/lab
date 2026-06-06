@@ -1,0 +1,23 @@
+#!/bin/bash
+
+password1="secretpass"
+echo "Reveal password: ${password1}"
+echo "Length: ${#password1}"
+# 10
+
+# Validation
+if [[ ${#password1} -lt 8 ]]; then
+	echo "Password too short"
+	exit 1
+fi
+echo ""
+password2="secret"
+echo "Reveal password: ${password2}"
+echo "Length: ${#password2}"
+# 6
+
+# Validation
+if [[ ${#password2} -lt 8 ]]; then
+	echo "Password too short"
+	exit 1
+fi

@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [[ -z "$1" ]]; then
+	echo "Usage: $0 {apple|orange|banana}"
+	exit 1
+fi
+
+fruit="$1"
+
+case $fruit in 
+  apple)
+    echo "Apple is red in color"
+    ;;
+  orange)
+    echo "Orange is orange in color"
+    ;;
+  banana)
+    echo "A banana is yellow in color"
+    ;;
+  *)
+    echo "Unknown fruit: $fruit"
+    echo "Currently, only apple, orange and banana are in the list"
+    echo "Usage: $0 {apple|orange|banana}"
+    exit 1
+    ;;
+esac

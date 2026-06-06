@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Description: List all files in the ~/dotfiles directory
+
+dotfile_directory=$(find ~ -type d -name "dotfiles")
+echo "Location of Dotfile Directory: ${dotfile_directory}"
+echo "Changing directory ..."
+if [[ -e ${dotfile_directory} ]]; then 
+	cd "${dotfile_directory}" || exit 1
+fi
+echo "Current Location: $(pwd)"
+
+for file in *; do
+	[[ -f ${file} ]] || continue
+	echo "Found: ${file}"
+done
