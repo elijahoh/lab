@@ -1,3 +1,12 @@
 {
-  "reportAttributeAccessIssue": "none"
+  "venvPath": ".",
+  "venv": ".venv",
+  "reportAttributeAccessIssue": "none",
+# Setting extraPaths to just ["."] tells Pyright to scan recursively from the root down, solving the issue for all present and future folders.
+  "executionEnvironments": [
+    {
+      "root": ".",
+      "extraPaths": ["."]
+    }
+  ]
 }
